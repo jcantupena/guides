@@ -129,10 +129,10 @@ Crear la _branch_ del _release_ desde __develop__.
 
 ```sh
 # En la branch de develop
-git checkout -b release-[YYYMMDD]-[HHMM]
+git checkout -b Release-[VxRd.dd]
 ```
 
-Nombre de ejemplo de la branch: `release-20140325-1804`
+Nombre de ejemplo de la branch: `Release-V6R1.21`
 
 Como lo dicta el flujo de git: Esta nueva _branch_ puede existir por un tiempo,
 hasta que el _release_ sea lanzado definitivamente. Durante este tiempo, se
@@ -140,17 +140,24 @@ puede ccorrejir bugs en esta _branch_ (en vez que la de __develop__). Se
 prohibe agregar nuevas funcionalidades. Estas deben de hacerse sobre __develop__
 y por ende, esperar hasta el siguiente _release_.
 
-Una vez que todo esta listo, haz _merge_ de la _branch_ del _release_ a __master__.
+Subir branch release a github (Este proceso se realizará Viernes por la noche)
+
+```sh
+# En la branch de release
+git push origin Release-[VxRd.dd]
+```
+
+Una vez que todo esta listo, haz _merge_ de la _branch_ del _release_ a __master__. Este proceso se realizará el Miércoles a las 3:15 PM.
 
 ````
 git checkout master
-git merge release-[YYYYMMDD]-[HHMM]
+git merge Release-[VxRd.dd]
 ````
 
 Agregar el _tag_ de la version del _release_.
 
 ````
-git tag -a [YYYYMMDD]-[HHMM]
+git tag -a VxRd.dd
 ````
 
 Tambien actualiza __develop__ con la nueva _branch_.
