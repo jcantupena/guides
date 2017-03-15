@@ -164,7 +164,7 @@ Tambien actualiza __develop__ con la nueva _branch_.
 
 ````
 git checkout develop
-git merge release-[YYYYMMDD]-[HHMM]
+git merge release-[VxRd.dd]
 ````
 
 Finalmente, actualiza el repositorio remoto.
