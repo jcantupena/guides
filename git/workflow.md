@@ -175,7 +175,7 @@ git push origin develop
 git push origin --tags
 ````
 
-###Proceso de creación de HotFix
+### Proceso de creación de HotFix
 
 Una vez integrados los cambios a master y mergeados a develop por el equipo de Ingeniería se procede a realizar lo siguiente:
 
