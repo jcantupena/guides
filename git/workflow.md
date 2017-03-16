@@ -151,7 +151,7 @@ Una vez que todo esta listo, haz _merge_ de la _branch_ del _release_ a __master
 
 ````
 git checkout master
-git merge Release-[VxRd.dd]
+git merge --no-ff Release-[VxRd.dd]
 ````
 
 Agregar el _tag_ de la version del _release_.
@@ -164,7 +164,7 @@ Tambien actualiza __develop__ con la nueva _branch_.
 
 ````
 git checkout develop
-git merge release-[VxRd.dd]
+git merge --no-ff release-[VxRd.dd]
 ````
 
 Finalmente, actualiza el repositorio remoto.
@@ -174,3 +174,25 @@ git push origin master
 git push origin develop
 git push origin --tags
 ````
+
+###Proceso de creación de HotFix
+
+Una vez integrados los cambios a master y mergeados a develop por el equipo de Ingeniería se procede a realizar lo siguiente:
+
+````
+git checkout master
+
+git pull origin master
+
+````
+
+Agregar el _tag_ de la version del _release_ del HotFix.
+
+````
+git tag -a VxRd.dd
+
+````
+
+Finalmente, actualizar el repositorio remoto.
+
+git push origin --tags
